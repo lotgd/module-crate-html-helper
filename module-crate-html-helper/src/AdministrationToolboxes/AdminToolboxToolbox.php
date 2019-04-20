@@ -7,15 +7,15 @@ namespace LotGD\Module\CrateHtmlHelper\AdministrationToolboxes;
 
 use Doctrine\DBAL\Types\ConversionException;
 use LotGD\Crate\WWW\AdministrationToolboxes\AbstractToolbox;
+use LotGD\Crate\WWW\Form\FormEntity\UserFormEntity;
 use LotGD\Crate\WWW\Form\UserEditForm;
 use LotGD\Crate\WWW\Model\Role;
 use LotGD\Crate\WWW\Model\User;
 use LotGD\Crate\WWW\Twig\AdminToolbox;
 use LotGD\Crate\WWW\Twig\Toolbox\ToolboxTable;
 use LotGD\Crate\WWW\Twig\Toolbox\ToolboxTableRow;
-use LotGD\Module\CrateHtmlHelper\Form\FormEntity\UserFormEntity;
 
-class UserToolbox extends AbstractToolbox
+class AdminToolboxToolbox extends AbstractToolbox
 {
     /**
      * @return AdminToolbox
@@ -23,7 +23,7 @@ class UserToolbox extends AbstractToolbox
      */
     protected function getListToolbox(): ?AdminToolbox
     {
-        $toolbox = new AdminToolbox("List of all users");
+        $toolbox = new AdminToolbox("List of all admin toolboxes");
 
         # Create table
         $table = new ToolboxTable();
