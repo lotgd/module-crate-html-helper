@@ -1,0 +1,38 @@
+{
+    "name": "lotgd/module-crate-html-helper",
+    "description": "Helper module to help the crate install stuff.",
+    "type": "lotgd-module",
+    "license": "AGPL-3.0",
+    "authors": [
+        {
+            "name": "Austen McDonald",
+            "email": "austen.mcdonald@gmail.com"
+        },
+        {
+            "name": "Basilius Sauter",
+            "email": "basilius.sauter@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "LotGD\\Module\\CrateHtmlHelper\\": "src/",
+            "LotGD\\Module\\CrateHtmlHelper\\Tests\\": "tests/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://raw.githubusercontent.com/lotgd/packages/master/build/packages.json"
+        }
+    ],
+    "require": {
+        "lotgd/core": ">=0.5.0-alpha"
+    },
+    "require-dev": {
+        "lotgd/crate-html": "dev-master",
+        "phpunit/phpunit": "^4.1|^5.1",
+        "phpunit/dbunit": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable" : true
+}
