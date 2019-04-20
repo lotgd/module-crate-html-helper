@@ -33,8 +33,10 @@ class Module implements ModuleInterface {
         ];
 
         $pages["users"]->addRequiredRole($roles["superuser"]);
+        $pages["users"]->setName("User");
         $pages["characters"]->addRequiredRole($roles["superuser"]);
         $pages["characters"]->addRequiredRole($roles["characterEditor"]);
+        $pages["characters"]->setName("Character");
 
         foreach ($roles as $role) {
             $em->persist($role);
